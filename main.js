@@ -151,6 +151,8 @@ const game = () => {
         }
 
 
+ gsap.fromTo(".circle1", {},{top:520, duration:2,repeat:-1,yoyo:true})
+ gsap.fromTo(".circle2", {},{bottom:520, duration:2,repeat:-1,yoyo:true})
 
 game();
 })
