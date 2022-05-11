@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <title>Schere Stein Papier</title>
+</head>
+<body>
+    <main>
+    <section class="spiel">
+    
+        <div class="spielstand">
+            <div class="player-Spielstand">
+                <h2>Spieler</h2>
+                <p>0</p>
+            </div>
+            <div class="computer-Spielstand">
+                <h2>Computer</h2>
+                <p>0</p>
+            </div>
+      </div>
+ 
+      <div class="intro">
+          <h1>Schere Stein Papier</h1>
+          <button>Spielen</button>
+      </div>
+ 
+      <div id="aktive" class="match passiv">
+              <h2>Wähle eine Option </h2>
+          <div class="hand">
+              <img class="spieler-hand" src="./assets/Stein.png" alt="">
+              <img class="computer-hand" src="./assets/Stein.png" alt="">
+          </div>
+       <div class="optionen">
+
+        <button class="schere">Schere</button>
+        <button class="stein">Stein</button>
+        <button class="papier">Papier</button>
+        </div>
+    </div>
+    
+    <div class="ende passiv">
+        <h2>Das Spiel ist Vorbei!</h2>
+        <p>Spieler hat gewonnen</p>
+        <button>Spielen</button>
+    </div>
+ 
+    
+ 
+ 
+ 
+ 
+    </section>
+
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
+</main>
+
+    <script src="main.js"></script>
+</body>
+</html>
