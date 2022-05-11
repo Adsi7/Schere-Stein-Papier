@@ -107,6 +107,8 @@ const game = () => {
 
             const ende =()=>{
                 if(spielerStand==3){
+                    gsap.fromTo(".ende p", {y:-200,  fontSize: 100},{y:0,duration: 2.5, ease: "bounce.out", delay:1, fontSize: 30})
+         
                     $("#aktive").removeClass("aktiv")
                     setTimeout(()=>{
                     $(".ende").addClass("aktiv",function(){
@@ -116,6 +118,7 @@ const game = () => {
                 
                     }
                 else if(computerStand==3){
+                    gsap.fromTo(".ende p", {y:-200},{y:0,duration: 2.5, ease: "bounce.out", delay:.8})
                     $("#aktive").removeClass("aktiv");
 
                     setTimeout(()=>{
@@ -146,7 +149,6 @@ const game = () => {
             
             spielen();
         }
-
 
 
 
