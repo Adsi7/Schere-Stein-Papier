@@ -41,9 +41,14 @@ const game = () => {
                         
                         computerHand.src=`./assets/Stein.png`;
                         spielerHand.src=`./assets/Stein.png`;
-                            
-                        spielerHand.style.animation="shakePlayer 2s ease";
-                        computerHand.style.animation="shakeComputer 2s ease";
+                         
+                        
+                        gsap.fromTo(".computer-hand",{y:0},{y:-50,duration:.3,yoyo:true,repeat:5})
+                        gsap.fromTo(".spieler-hand",{y:0},{y:-50,duration:.3,ease:"ease",yoyo:true,repeat:5})
+                        
+
+                      // spielerHand.style.animation="shakePlayer 2s ease";
+                       // computerHand.style.animation="shakeComputer 2s ease";
                         
                     })
                 })
@@ -150,9 +155,14 @@ const game = () => {
             spielen();
         }
 
+let circle1= gsap.timeline({repeat:-1,yoyo:true});
+circle1.fromTo(".circle1", {},{top:520, duration:2})
+circle1.fromTo(".circle1", {},{right:520, duration:2, opacity:0})
 
- gsap.fromTo(".circle1", {},{top:520, duration:2,repeat:-1,yoyo:true})
- gsap.fromTo(".circle2", {},{bottom:520, duration:2,repeat:-1,yoyo:true})
+let circle2=gsap.timeline({repeat:-1,yoyo:true})
+ 
+circle2.fromTo(".circle2", {},{bottom:520, duration:2})
+circle2.fromTo(".circle2", {},{left:520, duration:2, opacity:0})
 
 game();
 })
